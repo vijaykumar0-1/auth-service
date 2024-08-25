@@ -29,7 +29,16 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+	// Hibernate Validator (Bean Validation API implementation)
+	implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
+	implementation 'org.glassfish:javax.el:3.0.0' // Required for Hibernate Validator
+	implementation 'org.springframework.boot:spring-boot-starter-validation' // Spring Boot validation starter
 }
+
+
+
+
 
 tasks.named('test') {
 	useJUnitPlatform()

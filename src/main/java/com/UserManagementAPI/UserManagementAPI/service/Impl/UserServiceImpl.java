@@ -1,6 +1,5 @@
 package com.UserManagementAPI.UserManagementAPI.service.Impl;
 
-import com.UserManagementAPI.UserManagementAPI.Mapper.UserMapper;
 import com.UserManagementAPI.UserManagementAPI.model.User;
 import com.UserManagementAPI.UserManagementAPI.repository.UserRepository;
 import com.UserManagementAPI.UserManagementAPI.repository.UserRepositoryInterface;
@@ -17,11 +16,10 @@ public class UserServiceImpl implements UserService {
     private UserRepositoryInterface userRepositoryInterface;
 
     @Override
-    public String createUser(String firstName, String lastName, String email, String age, String password) {
-        User user = UserMapper.toUser(firstName, lastName, email, age, password);
-
-        if (userRepositoryInterface.findByEmail(email) == null) {
-            User response = userRepository.createUser(user);
+    public String createUser(User user) {
+        if (userRepositoryInterface.findByEmail(user.getEmail()) == null &&
+                userRepositoryInterface.findByUsername(user.getUsername()) == null) {
+            userRepository.createUser(user);
             return "user Created";
         }
         return "user already exists !";

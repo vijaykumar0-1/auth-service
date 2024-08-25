@@ -1,5 +1,7 @@
 package com.UserManagementAPI.UserManagementAPI.service;
 
+import com.UserManagementAPI.UserManagementAPI.model.User;
+
 public interface UserService {
-    String createUser(String firstName, String lastName, String email, String age,String password);
+    String createUser(User user);
 }

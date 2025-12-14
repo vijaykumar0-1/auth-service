@@ -1,6 +1,6 @@
-package com.usermanagementapi.repository;
+package com.authservice.repository;
 
-import com.usermanagementapi.entity.RefreshToken;
+import com.authservice.entity.RefreshToken;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;

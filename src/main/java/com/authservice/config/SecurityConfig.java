@@ -1,8 +1,8 @@
-package com.usermanagementapi.config;
+package com.authservice.config;
 
 
-import com.usermanagementapi.controllers.JwtAuthenticationEntryPoint;
-import com.usermanagementapi.service.impl.CustomUserDetailsServiceImpl;
+import com.authservice.controllers.JwtAuthenticationEntryPoint;
+import com.authservice.service.impl.CustomUserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

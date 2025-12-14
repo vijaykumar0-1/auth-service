@@ -1,7 +1,7 @@
-package com.usermanagementapi.service.impl;
+package com.authservice.service.impl;
 
-import com.usermanagementapi.entity.User;
-import com.usermanagementapi.repository.UserRepository;
+import com.authservice.entity.User;
+import com.authservice.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

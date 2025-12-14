@@ -1,7 +1,7 @@
-package com.usermanagementapi.controllers;
+package com.authservice.controllers;
 
-import com.usermanagementapi.dto.UserDto;
-import com.usermanagementapi.service.UserService;
+import com.authservice.dto.UserDto;
+import com.authservice.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

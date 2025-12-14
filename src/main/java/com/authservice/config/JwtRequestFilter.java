@@ -1,11 +1,13 @@
-package com.usermanagementapi.config;
+package com.authservice.config;
 
-import com.usermanagementapi.service.impl.CustomUserDetailsServiceImpl;
-import com.usermanagementapi.security.JwtTokenProvider;
+import com.authservice.service.impl.CustomUserDetailsServiceImpl;
+import com.authservice.security.JwtTokenProvider;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,6 +22,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     private final CustomUserDetailsServiceImpl userDetailsService;
     private final JwtTokenProvider jwtTokenProvider;
+    private final Logger LOGGER = LoggerFactory.getLogger(JwtRequestFilter.class);
 
     public JwtRequestFilter(CustomUserDetailsServiceImpl userDetailsService, JwtTokenProvider jwtTokenProvider) {
         this.userDetailsService = userDetailsService;
@@ -62,7 +65,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 }
             }
         } catch (Exception ex) {
-            System.out.println("JWT Filter Exception: " + ex.getMessage());
+            LOGGER.warn("Invalid or expired JWT token");
         }
 
         chain.doFilter(request, response);

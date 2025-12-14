@@ -1,4 +1,4 @@
-package com.usermanagementapi.dto;
+package com.authservice.dto;
 
 import lombok.Data;
 

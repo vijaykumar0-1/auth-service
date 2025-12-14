@@ -1,4 +1,4 @@
-package com.usermanagementapi.security;
+package com.authservice.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;

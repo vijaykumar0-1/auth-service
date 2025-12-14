@@ -1,4 +1,4 @@
-package com.usermanagementapi.entity;
+package com.authservice.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

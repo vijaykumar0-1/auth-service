@@ -1,9 +1,9 @@
-package com.usermanagementapi.service.impl;
+package com.authservice.service.impl;
 
-import com.usermanagementapi.dto.UserDto;
-import com.usermanagementapi.entity.User;
-import com.usermanagementapi.repository.UserRepository;
-import com.usermanagementapi.service.UserService;
+import com.authservice.dto.UserDto;
+import com.authservice.entity.User;
+import com.authservice.repository.UserRepository;
+import com.authservice.service.UserService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.usermanagementapi.service;
+package com.authservice.service;
 
-import com.usermanagementapi.entity.RefreshToken;
+import com.authservice.entity.RefreshToken;
 
 import java.util.Optional;
 

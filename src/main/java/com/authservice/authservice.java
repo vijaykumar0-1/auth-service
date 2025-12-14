@@ -1,13 +1,13 @@
-package com.usermanagementapi;
+package com.authservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserManagementApiApplication {
+public class authservice {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserManagementApiApplication.class, args);
+		SpringApplication.run(authservice.class, args);
 	}
 
 }

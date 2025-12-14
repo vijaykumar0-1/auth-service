@@ -3,6 +3,8 @@
 A production-ready authentication & authorization microservice built using Spring Boot.
 This service provides secure user authentication using JWT access tokens and database-backed refresh tokens, and is designed to be reused as a standalone auth / identity service in any backend system.
 
+🟢 Deployed on Render and accessible publicly via Swagger UI.
+
 ---
 
 ✨ Features
@@ -106,7 +108,7 @@ Authorization: Bearer <ACCESS_TOKEN>
 
 After starting the application:
 
-http://localhost:8080/swagger-ui.html
+https://usermanagementapi-k62m.onrender.com/swagger-ui.html
 
 Use the Authorize button and provide:
 
